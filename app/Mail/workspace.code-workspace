@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"path": "..\\.."
+		},
+		{
+			"path": "..\\..\\..\\..\\xampp\\htdocs\\nifticals"
+		},
+		{
+			"path": "..\\..\\..\\..\\xampp\\htdocs\\html-nifticals"
+		},
+		{
+			"path": "..\\..\\..\\pergola"
+		},
+		{
+			"path": "..\\..\\..\\..\\xampp\\htdocs\\psi-gate"
+		},
+		{
+			"path": "..\\..\\..\\newSendGrid"
+		},
+		{
+			"path": "..\\..\\..\\..\\xampp\\htdocs\\country_code_jd"
+		},
+		{
+			"path": "..\\..\\..\\elevated-project\\elevated-project"
+		},
+		{
+			"path": "..\\..\\..\\Propandas"
+		}
+	],
+	"settings": {}
+}

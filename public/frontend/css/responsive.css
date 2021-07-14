@@ -1,0 +1,361 @@
+@media (max-width: 767px) {
+
+header{
+    padding: 10px 0;
+}
+header .menu-part {
+    background: none;
+    margin-top: 0;
+    position: absolute;
+    top: -44px;
+    right: 0px;
+    width: 100%;
+}
+.slim-container .slim-bar {
+    background: none !important;
+}
+.slim-container a.slimNav_sk78-reveal span {
+    background: #111 !important;
+}
+a.slimNav_sk78-reveal.slimclose {
+    color: #111 !important;
+}
+.slim-container .slim-nav {
+    background: #111 !important;
+    overflow: hidden;
+}
+.slim-container .slim-nav ul li a.slim-expand {
+    height: 27px !important;
+    font-size: 29px !important;
+    font-weight: 500 !important;
+    line-height: 29px;
+    z-index: 99999999 !important;
+}
+.logo_con{
+    text-align: center !important;
+    padding-top: 10px;
+}
+.logo_con img{
+    width: 150px;
+    margin-bottom: 10px;
+}
+header .header_rihgt ul li a{
+    font-size: 14px;
+    line-height: 36px;
+}
+header .header_rihgt ul li a.join{
+    padding: 0 20px;
+}
+header .header_rihgt {
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+}
+header .menu-part ul li a {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 0 20px;
+    display: block;
+}
+.banner .bantext {
+    width: 100%;
+    float: none;
+    padding-top: 20px;
+}
+.banner .bantext h1 {
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 0 10px;
+}
+.banner .bantext p {
+    font-size: 14px;
+    line-height: 20px;
+}
+.banner .bantext a {
+    font-size: 14px;
+    padding: 10px 15px;
+    margin: 0 0 20px;
+}
+.main_slider .slide_pic{
+    padding-right: 15px;
+}
+.main_slider .owl-dots {
+    margin: 0px auto 40px;
+    padding: 15px 15px 0;
+}
+.feature_area .feature_pic h3 {
+    font-size: 16px;
+    margin: 15px 0;
+}
+.feature_area {
+    padding: 20px 0 30px;
+    text-align: center;
+}
+.feature_area h2, .prod_area h2 {
+    font-size: 26px;
+    margin: 0 0 20px;
+}
+.print_area {
+    padding: 30px 0;
+}
+.print_area h4 {
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+.print_area h2 {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 40px;
+    margin: 0;
+}
+.print_area a {
+    font-size: 16px;
+    padding: 10px 25px;
+    margin: 10px 0 30px;
+}
+.prod_area{
+    padding: 30px 0;
+}
+.prod_area .prod_pic h3 {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 15px 0 5px;
+    height: 42px;
+    overflow: hidden;
+}
+.prod_area .prod_pic h4 {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0;
+}
+.prod_area .prod_pic {
+    margin-bottom: 20px;
+}
+.canvas_sec_back {
+    padding: 30px 0;
+}
+.canvas_sec_back h2 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 40px;
+    padding: 0 15px;
+}
+.canvas_sec_back a{
+    padding: 10px 25px;
+}
+footer {
+    padding: 30px 0 0;
+}
+footer .foot_info input:not([type=submit]) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+footer .foot_info input[type=submit]{
+    width: 100%;
+}
+footer .foot_menu ul li a{
+    margin: 0 7px;
+}
+footer .foot_menu ul {
+    text-align: center;
+}
+footer .foot_bot .foot_bot_con {
+    padding: 10px 0;
+}
+footer .foot_menu {
+    padding: 20px 0 15px;
+}
+
+.inner-ban img {
+    min-height: 150px;
+    object-fit: cover;
+}
+.inner-ban h2 {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.inner-ban ul li {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+.inner-ban ul li i.fas.fa-chevron-right {
+    font-size: 12px;
+    margin: 0 8px;
+}
+section.prod_area select {
+    border: 1px solid #000000;
+    font-size: 15px;
+    margin: 0 0 19px;
+    padding: 12px;
+}
+section.prod_area .side-bar ul {
+    background-color: #f1f6f9;
+    margin: 0 0 20px;
+}
+section.contact-page {
+    padding: 15px;
+}
+section.contact-page .sec1 {
+    background-color: #4d008d;
+    padding: 20px;
+}
+
+section.contact-page .sec1 h3 {
+    font-size: 25px;
+    margin: 0 0 35px;
+}
+section.contact-page .sec1 ul li {
+    margin: 0 0 30px;
+}
+section.contact-page .sec2 {
+    background-color: #f1f6f9;
+    padding: 20px;
+}
+section.contact-page .sec2 h3 {
+    font-size: 25px;
+    margin: 0 0 20px;
+}
+section.contact-page .sec2 textarea {
+    height: 115px;
+}
+section.join-page {
+    padding: 15px 0;
+    position: relative;
+}
+section.join-page h3 {
+    color: #000000;
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0 0 9px;
+}
+section.join-page p {
+    font-size: 14px;
+    margin: 0 0 22px;
+}
+section.join-page input[type="submit"] {
+    margin: 0 0 30px;
+}
+section.join-page:after{
+    display: none;
+}
+div#myModal2 img {
+    height: 150px;
+    object-fit: cover;
+    width: 100%;
+}
+div#myModal2 .field img {
+    height: auto;
+    width: auto;
+}
+div#myModal2 .modal-header .close {
+    padding: 1rem 1rem;
+    margin: -1rem -1rem -1rem auto;
+    opacity: 1;
+    color: #fff;
+    font-size: 35px;
+}
+div#myModal2 h3 {
+    color: #000000;
+    font-size: 19px;
+    font-weight: 500;
+    margin: 20px 0 21px;
+}
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+header{
+    padding: 15px 0;
+}
+header .menu-part {
+    background: none;
+    margin-top: 0;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: auto;
+}
+.slim-container .slim-bar {
+    background: none !important;
+}
+
+.slim-container .slim-nav {
+    background: none !important;
+    overflow: hidden;
+}
+.slim-container .slim-nav ul li a.slim-expand {
+    height: 27px !important;
+    font-size: 29px !important;
+    font-weight: 500 !important;
+    line-height: 29px;
+    z-index: 99999999 !important;
+}
+.slim-container a.slimNav_sk78-reveal span {
+    background: #111 !important;
+}
+a.slimNav_sk78-reveal.slimclose {
+    color: #111 !important;
+}
+.slim-container .slim-nav {
+    background: #111 !important;
+    overflow: hidden;
+}
+header .header_rihgt{
+    float: right;
+    margin-right: 40px;
+}
+.banner .bantext {
+    width: 340px;
+    float: right;
+    padding-top: 0;
+}
+.banner .bantext h1 {
+    font-size: 30px;
+    line-height: 43px;
+    margin: 0 0 15px;
+}
+.banner .bantext p {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.main_slider .owl-dots {
+    max-width: 720px;
+    margin: 15px auto 0px;
+    padding: 0 5px;
+}
+.feature_area .feature_pic h3 {
+    font-size: 18px;
+    margin: 20px 0 0;
+}
+.feature_area h2, .prod_area h2 {
+    font-size: 30px;
+    margin: 0 0 30px;
+}
+.print_area h2 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 40px;
+    margin: 0;
+}
+.print_area h4{
+    font-size: 20px;
+}
+.prod_area .prod_pic h3 {
+    font-size: 17px;
+    line-height: 23px;
+    margin: 10px 0 0;
+}
+.canvas_sec_back h2 {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 60px;
+    padding: 0 10%;
+}
+}

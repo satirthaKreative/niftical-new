@@ -1,0 +1,51 @@
+.prod_details_tab .tabcontent {
+    display: none;
+    padding: 0;
+    width: 100%;
+}
+header .menu-part ul li.current-menu-item a{
+    position: relative;
+    background-color: #6a959e;
+    color: #fff;
+    border-radius: 5px;
+}
+/* ul li.current-menu-item a:after{
+    content: '';
+    width: 100%;
+    bottom: -10px;
+    left: 0;
+    height: 2px;
+    background: #000;
+} */
+
+.my_Select select{
+    width: 70px;
+    padding: 15px 5px;
+    display: inline-block;
+    height: 55px;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+    font-weight: 400;
+    border: 2px solid #000000;
+}
+.my_Select input{
+    width: calc(100% - 70px) !important;
+    float: right;
+    border-left: none !important;
+    border-radius: 0 4px 4px 0 !important;
+}
+.account .edit_table form input[type=button]{
+    border-radius: 4px;
+    background-color: #6a959e;
+    height: 55px;
+    line-height: 55px;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 40px;
+    width: auto;
+}
+.account .edit_table form input[type=button]:hover{
+    background: #000;
+}
