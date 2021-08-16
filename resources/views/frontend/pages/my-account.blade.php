@@ -1,5 +1,11 @@
 @extends('frontend.app')
 @section('content')
+
+@guest
+<script>
+    window.location.href = "{{ route('satirtha.join') }}";
+</script>
+@else
 <div class="inner-ban">
     <img src="{{ asset('frontend/images/inner-ban.jpg') }}" alt="">
     <div class="ban text">
@@ -20,7 +26,7 @@
                       <a class="nav-link active" data-toggle="tab" href="#account">My Account</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" data-toggle="tab" href="#order">My Orders</a>
+                      <a class="nav-link" href="{{ route('satirtha.order-now') }}">My Orders</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" data-toggle="tab" href="#address">Manage address</a>
@@ -461,3 +467,4 @@
   }
 </script>
 @endsection
+@endguest

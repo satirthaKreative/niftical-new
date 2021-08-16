@@ -2699,8 +2699,9 @@ div#myModal2 span.pip span.remove {
 }
 
 .new_details_bot .new_details_bot_left .new_details_bot_left_info {
-  -webkit-box-shadow: 0 0 17px -9px #000;
-          box-shadow: 0 0 17px -9px #000;
+  padding-top: 30px;
+  background: #4d008d1a;
+  border-radius: 15px;
 }
 
 .new_details_bot .new_details_bot_left .new_details_bot_left_info .new_details_bot_left_ban {
@@ -2851,14 +2852,10 @@ div#myModal2 span.pip span.remove {
   padding-left: 2rem;
   padding-right: 2rem;
   text-transform: capitalize;
-  background: #0cbd81;
+  background: #4d008d;
   color: #fff;
   margin-top: 25px;
   font-size: 16px;
-}
-
-.new_details_bot .nd_right_b1 .but2 {
-  background: #1074d0;
 }
 
 .new_details_bot .nd_right_b1 .nd_right_b1_bot {
@@ -2883,24 +2880,20 @@ div#myModal2 span.pip span.remove {
 }
 
 .new_details_bot .nd_right_b2 .nd_right_b2_info {
-  background: #efefef;
-  padding: 10px 30px;
-  border: solid 1px #ccc;
+  background: #fff;
+  padding: 10px 15px;
   border-radius: 20px;
+  -webkit-box-shadow: 0 0 19px -11px #000;
+          box-shadow: 0 0 19px -11px #000;
 }
 
 .new_details_bot .nd_right_b2 .nd_right_b2_info .nd_right_b2_info_con {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 25px 0;
-  border-top: solid 1px #999;
+  padding: 15px 15px;
+  background: #ece2e2;
+  margin: 5px 0 10px;
+  border-radius: 10px;
+  font-size: 0;
 }
 
 .new_details_bot .nd_right_b2 .nd_right_b2_info .nd_right_b2_info_con .nd_right_b2_info_con1 {
@@ -2908,6 +2901,9 @@ div#myModal2 span.pip span.remove {
   height: 60px;
   border-radius: 50%;
   overflow: hidden;
+  border: solid 1px #4d008d;
+  float: left;
+  margin-top: -5px;
 }
 
 .new_details_bot .nd_right_b2 .nd_right_b2_info .nd_right_b2_info_con .nd_right_b2_info_con1 img {
@@ -2919,10 +2915,11 @@ div#myModal2 span.pip span.remove {
 
 .new_details_bot .nd_right_b2 .nd_right_b2_info .nd_right_b2_info_con .nd_right_b2_info_con2 {
   width: 44%;
+  display: inline-block;
 }
 
 .new_details_bot .nd_right_b2 .nd_right_b2_info .nd_right_b2_info_con .nd_right_b2_info_con2 h3 {
-  color: #666;
+  color: #4d008d;
   font-size: 16px;
   letter-spacing: 1px;
   margin: 0;
@@ -2937,6 +2934,7 @@ div#myModal2 span.pip span.remove {
 
 .new_details_bot .nd_right_b2 .nd_right_b2_info .nd_right_b2_info_con .nd_right_b2_info_con3 {
   width: calc(56% - 60px);
+  display: inline-block;
 }
 
 .new_details_bot .nd_right_b2 .nd_right_b2_info .nd_right_b2_info_con .nd_right_b2_info_con3 h4 {
@@ -3279,5 +3277,92 @@ div#myModal2 span.pip span.remove {
 
 #myModal_end_auc .modal-dialog .modal-content .modal-body a.no:hover {
   background: #666;
+}
+
+#pre-auction-order-details-modal .modal-content {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+#pre-auction-order-details-modal .modal-header {
+  background: #eee;
+  border: none;
+}
+
+#pre-auction-order-details-modal .modal-header h4 {
+  color: #000;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#pre-auction-order-details-modal .modal-body h3 {
+  color: #666;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 0 10%;
+}
+
+#pre-auction-order-details-modal .modal-footer {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#pre-auction-order-details-modal .modal-footer a {
+  display: inline-block;
+  padding: 7px 15px;
+  background: #620aa0;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+#auction-order-details-modal .modal-content {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+#auction-order-details-modal .modal-header {
+  background: #eee;
+  border: none;
+}
+
+#auction-order-details-modal .modal-header h4 {
+  color: #000;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#auction-order-details-modal .modal-body label {
+  color: #666;
+}
+
+#auction-order-details-modal .modal-body input:not([type=submit]) {
+  width: 100%;
+  border: 2px solid #000000;
+  background: none;
+  padding: 15px;
+  margin: 0 0 15px;
+  border-radius: 4px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.92px;
+  height: 50px;
+}
+
+#auction-order-details-modal .modal-body .btn-primary {
+  padding: 6px 15px;
+  background: #620aa0;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+#auction-order-details-modal .modal-footer {
+  padding: 15px 0 0;
+  border: none;
 }
 /*# sourceMappingURL=style.css.map */

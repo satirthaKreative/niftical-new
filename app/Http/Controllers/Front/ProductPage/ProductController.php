@@ -30,7 +30,7 @@ class ProductController extends Controller
                 $html['product_datas'] .= '<div class="col-md-3 col-sm-3 col-6">
                                             <div class="feature_pic">
                                                 <div class="feature_pic_con">
-                                                    <img src="'.str_replace('public','storage',asset($allProduct->product_thumbnail)).'">
+                                                    <img src="'.str_replace('public','storage/app/public',asset($allProduct->product_thumbnail)).'">
                                                     <div class="hov-but">
                                                         <a href="'.route("satirtha.show-single-product",['val2' => base64_encode($allProduct->id)]).'">Product Details</a>
                                                     </div>

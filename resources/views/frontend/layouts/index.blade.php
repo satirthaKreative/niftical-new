@@ -1,5 +1,29 @@
 @extends('frontend.app')
 @section('content')
+<style type="text/css">
+.exp_but{
+    text-align: center;
+    margin-top: 35px;
+}
+.exp_but a{
+    height: 55px;
+    line-height: 53px;
+    border: solid 2px #4d008d;
+    color: #4d008d;
+    font-size: 18px;
+    letter-spacing: 1.68px;
+    text-transform: uppercase;
+    padding: 0 70px;
+    text-align: center;
+    background: none;
+    display: inline-block;
+    font-weight: 600;
+}
+.exp_but a:hover{
+    background: #4d008d;
+    color: #fff;
+}
+</style>
 <div class="main_slider">
     <div class="main-slider owl-carousel" id="banner-frontend-id">
         <div class="item">
@@ -35,6 +59,9 @@
                 </div>
             </div>
             
+        </div>
+        <div class="col-lg-12 exp_but">
+            <a href="{{ route('satirtha.auction.listing') }}">Explore</a>
         </div>
     </div>
 </section>

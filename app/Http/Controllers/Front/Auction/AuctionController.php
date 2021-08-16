@@ -30,18 +30,28 @@ class AuctionController extends Controller
 
     public function auction_home_fx(Request $request)
     {
-        $auctionQuery = AuctionModel::all();
+        $auctionQuery = AuctionModel::orderBy('id','Desc')->limit(3)->get();
         $html['auctionHtml'] = "";
         if(count($auctionQuery) > 0)
         {
             foreach($auctionQuery as $auctionQ)
             {
+                
+                $date1 = $auctionQ->created_at;
+                $date2 = $auctionQ->end_date_time;
+                $seconds = strtotime($date2) - strtotime($date1);
+                $hours = $seconds / 60 /  60;
+
+                $date_now = date('Y-m-d H:i:s');
+                $seconds2 = strtotime($date2) - strtotime($date_now);
+                $hours2 = $seconds2 / 60 /  60;
+
                 $html['auctionHtml'] .= '<div class="col-lg-4 col-md-4">
                                             <div class="m_cat_info">
                                                 <img src="'.str_replace('public','storage/app/public',asset($auctionQ->product_thumbnail)).'">
                                                     <h2>'.$auctionQ->product_name.'</h2>
                                                     <div class="progress">
-                                                    <div class="progress-bar" id="progress-bar" style="width: 13.7722%;"></div>
+                                                    <div class="progress-bar" id="progress-bar" style="width: '.(($hours2*100)/$hours).'%;"></div>
                                                     </div>
                                                 <a href="'.url('auction-products-details/'.base64_encode($auctionQ->id)).'">View Details</a>
                                             </div>

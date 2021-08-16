@@ -1,6 +1,10 @@
 @extends('frontend.app')
 @section('content')
-
+@guest
+<script>
+    window.location.href = "{{ route('satirtha.join') }}";
+</script>
+@else
 <style type="text/css">
 body{
     margin: 0;
@@ -23,8 +27,8 @@ body{
     text-align: center;
     text-transform: uppercase;
 }
-.order_details_area table tr:nth-child(1) {background-color: #1919a2b8 !important;}
-.order_details_area table tr:nth-child(odd) {background-color: #e8e8ff;}
+.order_details_area table tr:nth-child(1) {background-color: #6a00a0 !important;}
+.order_details_area table tr:nth-child(odd) {background-color: #6a00a030;}
 .order_details_area table tr:nth-child(even) {background-color: #e6e6e629;}
 .order_details_area table tr td{
     padding: 15px 10px;
@@ -39,6 +43,49 @@ body{
     max-height: 1200px;
     overflow: auto;
     width: 100%;
+}
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  width: 100%;
+      padding: 15px;
+    background: #74449d52;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+    background: #ccc;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: solid 2px #666;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #4d008da1;
+    border: solid 2px #4d008d;
+    color: #fff;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #4d008da1;
+    border: solid 2px #4d008d;
+    color: #fff;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  width: 100%;
 }
 @media  (max-width: 991px){
 .order_details_area{
@@ -80,147 +127,100 @@ body{
 <section class="order_details_area">
     <div class="container">
         <div class="row">
-            <div class="pdetail_table_con">
-                <table>
+            <div class="tab">
+              <button class="tablinks" onclick="openCity(event, 'od')" id="defaultOpen">Order History</button>
+              <button class="tablinks" onclick="openCity(event, 'hod')">Auction Order History</button>
+            </div>
+
+            <div id="od" class="tabcontent">
+                <div class="pdetail_table_con">
+                    <table id="od-order-details-id">
                     <tr>
-                        <th>image</th>
-                        <th>order id</th>
-                        <th>name</th>
-                        <th>quantity</th>
-                        <th>price</th>
-                    </tr>
-                    <tr>
-                        <td><img src="prod_pic.jpeg"></td>
-                        <td>#1234567890</td>
-                        <td>18 mega pixel camera</td>
-                        <td>1</td>
-                        <td>$200.00</td>
-                    </tr>
-                    <tr>
-                        <td><img src="prod_pic.jpeg"></td>
-                        <td>#1234567890</td>
-                        <td>18 mega pixel camera</td>
-                        <td>1</td>
-                        <td>$200.00</td>
-                    </tr>
-                    <tr>
-                        <td><img src="prod_pic.jpeg"></td>
-                        <td>#1234567890</td>
-                        <td>18 mega pixel camera</td>
-                        <td>1</td>
-                        <td>$200.00</td>
-                    </tr>
-                    <tr>
-                        <td><img src="prod_pic.jpeg"></td>
-                        <td>#1234567890</td>
-                        <td>18 mega pixel camera</td>
-                        <td>1</td>
-                        <td>$200.00</td>
-                    </tr>
-                    <tr>
-                        <td><img src="prod_pic.jpeg"></td>
-                        <td>#1234567890</td>
-                        <td>18 mega pixel camera</td>
-                        <td>1</td>
-                        <td>$200.00</td>
-                    </tr>
-                    <tr>
-                        <td><img src="prod_pic.jpeg"></td>
-                        <td>#1234567890</td>
-                        <td>18 mega pixel camera</td>
-                        <td>1</td>
-                        <td>$200.00</td>
-                    </tr>
-                    <tr>
-                        <td><img src="prod_pic.jpeg"></td>
-                        <td>#1234567890</td>
-                        <td>18 mega pixel camera</td>
-                        <td>1</td>
-                        <td>$200.00</td>
-                    </tr>
-                    <tr>
-                        <td><img src="prod_pic.jpeg"></td>
-                        <td>#1234567890</td>
-                        <td>18 mega pixel camera</td>
-                        <td>1</td>
-                        <td>$200.00</td>
-                    </tr>
-                    <tr>
-                        <td><img src="prod_pic.jpeg"></td>
-                        <td>#1234567890</td>
-                        <td>18 mega pixel camera</td>
-                        <td>1</td>
-                        <td>$200.00</td>
-                    </tr>
-                    <tr>
-                        <td><img src="prod_pic.jpeg"></td>
-                        <td>#1234567890</td>
-                        <td>18 mega pixel camera</td>
-                        <td>1</td>
-                        <td>$200.00</td>
-                    </tr>
-                    <tr>
-                        <td><img src="prod_pic.jpeg"></td>
-                        <td>#1234567890</td>
-                        <td>18 mega pixel camera</td>
-                        <td>1</td>
-                        <td>$200.00</td>
-                    </tr>
-                    <tr>
-                        <td><img src="prod_pic.jpeg"></td>
-                        <td>#1234567890</td>
-                        <td>18 mega pixel camera</td>
-                        <td>1</td>
-                        <td>$200.00</td>
-                    </tr>
-                    <tr>
-                        <td><img src="prod_pic.jpeg"></td>
-                        <td>#1234567890</td>
-                        <td>18 mega pixel camera</td>
-                        <td>1</td>
-                        <td>$200.00</td>
-                    </tr>
-                    <tr>
-                        <td><img src="prod_pic.jpeg"></td>
-                        <td>#1234567890</td>
-                        <td>18 mega pixel camera</td>
-                        <td>1</td>
-                        <td>$200.00</td>
-                    </tr>
-                    <tr>
-                        <td><img src="prod_pic.jpeg"></td>
-                        <td>#1234567890</td>
-                        <td>18 mega pixel camera</td>
-                        <td>1</td>
-                        <td>$200.00</td>
-                    </tr>
-                    <tr>
-                        <td><img src="prod_pic.jpeg"></td>
-                        <td>#1234567890</td>
-                        <td>18 mega pixel camera</td>
-                        <td>1</td>
-                        <td>$200.00</td>
-                    </tr>
-                    <tr>
-                        <td><img src="prod_pic.jpeg"></td>
-                        <td>#1234567890</td>
-                        <td>18 mega pixel camera</td>
-                        <td>1</td>
-                        <td>$200.00</td>
-                    </tr>
-                    <tr>
-                        <td><img src="prod_pic.jpeg"></td>
-                        <td>#1234567890</td>
-                        <td>18 mega pixel camera</td>
-                        <td>1</td>
-                        <td>$200.00</td>
-                    </tr>
-                </table>
+                                                    <th>image</th>
+                                                    <th>name</th>
+                                                    <th>price</th>
+                                                    <th>Date</th>
+                                                </tr>
+                        <tr>
+                            <td colspan=4 class="text-info"><center><i class="fa fa-spinner"></i> loading order history</center></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div id="hod" class="tabcontent">
+                <div class="pdetail_table_con">
+                    <table id="hod-order-details-id">
+                        <tr>
+                            <th>image</th>
+                            <th>name</th>
+                            <th>price</th>
+                            <th>Date</th>
+                        </tr>
+                        <tr>
+                            <td colspan=4 class="text-info"><center><i class="fa fa-spinner"></i> loading auction order history</center></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
 </section>
 @endsection
 @section('jsContent')
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
 
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+<script>
+    $(function(){
+        load_normal_order_history_fx();
+    });
+
+    function load_normal_order_history_fx()
+    {
+        $.ajax({
+            url: "{{ route('satirtha.normal-order-history') }}",
+            type: "GET",
+            dataType: "json",
+            success: function(event){
+                $("#od-order-details-id").html(event.normal_order_history_html);
+                $("#hod-order-details-id").html(event.auction_order_history_html);
+                // load_auction_order_history_fx();
+            }, error: function(event){
+                
+            }
+        })
+    }
+
+    function load_auction_order_history_fx()
+    {
+        $.ajax({
+            url: "{{ route('satirtha.order-history-listing') }}",
+            type: "GET",
+            dataType: "json",
+            success: function(resp){
+                $("#od-order-details-id").html(resp);
+            }, error: function(resp){
+                
+            }
+        });
+    }
+</script>
 @endsection
+@endguest

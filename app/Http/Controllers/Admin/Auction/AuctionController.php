@@ -36,7 +36,7 @@ class AuctionController extends Controller
                 $product_name = ucwords($getP->product_name);
 
                 // product image 
-                $product_thumbnails = '<img src="'.str_replace('public','storage',asset($getP->product_thumbnail)).'"  alt="no image" width="100px" height="100px" />';
+                $product_thumbnails = '<img src="'.str_replace('public','storage/app/public',asset($getP->product_thumbnail)).'"  alt="no image" width="100px" height="100px" />';
                 
                 // admin action
                 if($getP->admin_status == "active"){
@@ -115,6 +115,8 @@ class AuctionController extends Controller
             $product_thumbnail = $request->file('product_thumbnail_name')->store('public/auction/thumbnail');
         }
         // product insert 
+        $start = date('Y-m-d H:i:s');
+        $end =  date('Y-m-d H:i:s',strtotime('+'.$auction_time.' hour',strtotime($start)));
         $productArr = [
             'category_id' => $category_id, 
             'sub_category_id' => $sub_category_id, 
@@ -126,7 +128,10 @@ class AuctionController extends Controller
             'auction_time' => $auction_time, 
             'product_thumbnail' => $product_thumbnail, 
             'product_available_status' => 'available', 
-            'admin_status' => 'active'
+            'admin_status' => 'active',
+            'created_at' => $start,
+            'end_date_time' => $end,
+            'updated_at' => date('Y-m-d H:i:s')
         ];
         $productInsertQuery = AuctionModel::insert($productArr);
         if($productInsertQuery)
@@ -261,7 +266,7 @@ class AuctionController extends Controller
             $html['product_additional_des_full_view'] = $productQuery->product_additional_information;
             $html['product_auction_time'] = $productQuery->auction_time;
 
-            $html['getting_thumbnail_image'] = '<img src="'.str_replace('public','storage',asset($productQuery->product_thumbnail)).'" alt="No Image" width="100px" height="100px"/>';
+            $html['getting_thumbnail_image'] = '<img src="'.str_replace('public','storage/app/public',asset($productQuery->product_thumbnail)).'" alt="No Image" width="100px" height="100px"/>';
 
             
 
@@ -316,7 +321,8 @@ class AuctionController extends Controller
             'auction_time' => $auction_time, 
             'product_thumbnail' => $product_thumbnail, 
             'product_available_status' => 'available', 
-            'admin_status' => 'active'
+            'admin_status' => 'active',
+            'updated_at' => date("y-m-d H:i:s")
         ];
         $productInsertQuery = AuctionModel::where('id',$request->input('edit_product_name_first_id'))->update($productArr);
         if($productInsertQuery)

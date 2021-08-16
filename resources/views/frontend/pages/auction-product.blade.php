@@ -1,5 +1,11 @@
 @extends('frontend.app')
 @section('content')
+
+@guest
+<script>
+    window.location.href = "{{ route('satirtha.join') }}";
+</script>
+@else
 <div class="modal fade search-hold" id="myModal_auc" role="dialog">
     <div class="modal-dialog">
         <!-- Modal content-->
@@ -85,7 +91,7 @@
 <section class="acution_area">
     <div class="container">
         <div class="row">
-            <h2>Acution Products</h2>
+            <h2>Auction Products</h2>
             <table>
                 <tr>
                     <th>Image</th>
@@ -117,3 +123,4 @@
 @section('jsContent')
 
 @endsection
+@endguest

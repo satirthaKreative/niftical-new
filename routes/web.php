@@ -78,7 +78,6 @@ Route::group(['prefix' => '/'], function(){
         Route::get('/product-cart-quantity','Front\Cart\CartController@product_cart_quantity_fx')->name('satirtha.product-cart-quantity-fx');
 
         // cart country name's
-
         Route::get('/country-cart','Front\Cart\CartController@load_country_region_fx')->name('satirtha.country-cart-fx');
         
 
@@ -91,6 +90,21 @@ Route::group(['prefix' => '/'], function(){
        Route::get('/auction-products-details/{auction_name}','Front\Auction\AuctionController@auction_order_index')->name('satirtha.auction-products-details');
        Route::get('/auction-products-home','Front\Auction\AuctionController@auction_home_fx')->name('satirtha.auction.home-page');
        Route::get('/auction-products-order-details','Front\Auction\AuctionController@auction_order_details_fx')->name('satirtha.auction.order-details');
+
+
+        // Auction Listing
+        Route::get('/auction-products-listing','Front\Auction\AuctionListingController@index')->name('satirtha.auction.listing');
+        Route::get('/normal-order-history','Front\Auction\AuctionListingController@normal_order_history_fx')->name('satirtha.normal-order-history');
+        Route::get('/auction-listing-products','Front\Auction\AuctionListingController@auctionListedProductsFx')->name('satirtha.auction.listing-products');
+
+
+       // bid part
+       Route::get('/bidding','Front\Auction\Bid\BidController@user_bidding_fx')->name('satirtha.auction-product-bid');
+       Route::get('/bidding-timing-status','Front\Auction\Bid\BidController@user_bidding_time_status_fx')->name('satirtha.load-auction-product-status');
+       Route::get('/bidding-auction-bidders-for-products','Front\Auction\Bid\BidController@bidding_on_this_products_fx')->name('satirtha.auction-bidders-for-products');
+       Route::get('/auction-ended-action','Front\Auction\Bid\BidController@auction_ended_action_fx')->name('satirtha.auction-ended-action');
+
+       
 
 
     /// end of frontend ///
@@ -189,4 +203,7 @@ Route::group(['prefix' => '/admin'], function(){
     Route::get('/auction-product-status','Admin\Auction\AuctionController@product_details_status_fx')->name('admin.auction.product-change-action');
     Route::get('/auction-product-edit','Admin\Auction\AuctionController@product_details_edit_fx')->name('admin.auction.product-details-edit');
     Route::post('/auction-product-update','Admin\Auction\AuctionController@product_details_update_fx')->name('admin.auction.product-details-update');
+
+    
+
 });
